@@ -1,0 +1,62 @@
+<style>
+    @import url("../base.css");
+    body {
+         font-size: 15px;
+         line-height: 16px;
+         font-family: '04B_30';
+         background-color: var(--contrastbg);
+    }
+    h1 {
+          font-size: 15px;
+          line-height: 10px;
+          text-decoration: underline;
+          color: var(--lightest);
+          text-shadow:-1px -1px 0 var(--dark),1px -1px 0 var(--dark),-1px 1px 0 var(--dark),1px 1px 0 var(--dark); 
+          background-color: var(--shadow); 
+          width: fit-content;
+      }
+      img {
+          height: 31px;
+          width: 88px;
+          filter: sepia(40%);
+      }
+      a {
+          color: #dec3a8;
+         font-weight: 900;
+         text-decoration: none;
+         text-shadow:-1px -1px 0 #67380a,1px -1px 0 #67380a,-1px 1px 0 #67380a,1px 1px 0 #67380a;  
+      }
+      a:hover {
+          color: var(--contrastbg);
+      }
+  </style>
+  <body>
+  
+    <h1><b>my blog guide</b></h1>
+  
+    <a>step 1</a> - obsidian<br>
+  
+    <p style="margin: 0px;padding-left: 30px;">
+      write the post in obsidian on my mac, and once done, export to html with plugin and move the file to /blog/
+    </p>
+
+    <a>step 2</a> - formatting
+  
+    <p style="margin: 0px;padding-left: 30px;">
+      with the exported html file, there will be little formatting done to fit the webpage. Import the base css formatting file with @import url("../base.css");
+    </p>
+
+    <a>step 3</a> - indexing
+  
+    <p style="margin: 0px;padding-left: 30px;">
+      now that the scroll bar is formatted correctly, import the page into my blog index. To do this, basically just copy the previous entry and replace date modified, size, and the link to the file. The base64 png should stay static.
+    </p>
+
+    <a>step 4</a> - done
+  
+    <p style="margin: 0px;padding-left: 30px;">
+      should be fine to deploy then. still looks funky but its a vibe
+    </p>
+  
+  </body>
+  
