@@ -1,21 +1,21 @@
 @font-face {
   font-family: 'w95fa';
-  src: url(PixelOperator.ttf) format("truetype");
+  src: url(fonts/PixelOperator.ttf) format("truetype");
 } 
 
 @font-face {
   font-family: 'utonium';
-  src: url(OldEnglishGothicPixelRegular.ttf);
+  src: url(fonts/OldEnglishGothicPixelRegular.ttf);
 }
 
 @font-face {
   font-family: '04B_30';
-  src: url(PixelOperator.ttf);
+  src: url(fonts/PixelOperator.ttf);
 }
 
 @font-face {
   font-family: 'pixel-bubble';
-  src: url(pixelbubble.ttf);
+  src: url(fonts/pixelbubble.ttf);
 }
 
 :root {
