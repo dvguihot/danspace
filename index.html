@@ -123,6 +123,17 @@
         <span class="title"><img src="images/berry.png">6th apr 2025:</span><br>
         made some progress on the command prompt/terminal tab. i need to work out what it'll be used for in the future, also need to add more commands!
         <br><br>
+        <span class="title"><img src="images/berry.png">4th apr 2025:</span><br>
+        added "rooms.html", some experimental collages. perhaps to satisfy my sudden urge to own a beautiful home
+        <br><br>
+        <span class="title"><img src="images/berry.png">29th mar 2025:</span><br>
+        changed the color scheme from space themed to something softer. i prefer this softer color scheme and i think i'll be able to do more with it creatively
+        redid the "cover" page in the main tab, to include information and more graphics
+        <br><br>
+        <span class="title"><img src="images/berry.png">24th mar 2025:</span><br>
+        font and small layout changes
+        new (first) blog post!
+        <br><br>
       </div>
     </div>
 
@@ -192,6 +203,11 @@
       const container = document.body;
       const sparkleImage = "https://i.imgur.com/F8aTF8B.png";
       const sparkleSizeRange = [5, 5];
+
+
+    if (screen.width <= 700) {
+      document.location = "mobilepage.html";
+    }
 
       function lerp(a, b, f) {
         return (b - a) * f + a;
