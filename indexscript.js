@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const draggableElements = document.querySelectorAll(".draggable");
 
   draggableElements.forEach((element) => {
@@ -59,7 +59,7 @@ function toggleDropUp() {
   dropUpContent.classList.toggle("show");
 }
 
-document.addEventListener("click", function(event) {
+document.addEventListener("click", function (event) {
   var dropUpContent = document.getElementById("dropUpContent");
   var dropUpButton = document.querySelector(".box");
 
@@ -82,16 +82,16 @@ function closeTab(divNumber) {
   tabToClose.style.display = "none";
 }
 
-function loadFrame (elm){
-	var frame1 = document.getElementById('frame2');
-	frame1.src = elm.dataset.src;
+function loadFrame(elm) {
+  var frame1 = document.getElementById('frame2');
+  frame1.src = elm.dataset.src;
 }
 
 const iconButtons = document.querySelectorAll(".opennew");
 
 // Add a click event listener to each icon button
 iconButtons.forEach(button => {
-  button.addEventListener("click", function() {
+  button.addEventListener("click", function () {
     const targetURL = button.getAttribute("data-target");
     if (targetURL) {
       window.location.href = targetURL;
@@ -115,19 +115,19 @@ updateTime(); // Initial call to set the time immediately
 document.addEventListener("DOMContentLoaded", function () {
   const toggleButton = document.getElementById("toggleButton");
   const images = document.querySelectorAll(".toggle-image");
-  
+
   let imagesVisible = false;
-  
+
   toggleButton.addEventListener("click", function () {
-      if (imagesVisible) {
-          images.forEach(image => {
-              image.style.display = "none";
-          });
-      } else {
-          images.forEach(image => {
-              image.style.display = "block";
-          });
-      }
-      imagesVisible = !imagesVisible;
+    if (imagesVisible) {
+      images.forEach(image => {
+        image.style.display = "none";
+      });
+    } else {
+      images.forEach(image => {
+        image.style.display = "block";
+      });
+    }
+    imagesVisible = !imagesVisible;
   });
 });

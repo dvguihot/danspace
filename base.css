@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'w95fa';
   src: url(fonts/PixelOperator.ttf) format("truetype");
-} 
+}
 
 @font-face {
   font-family: 'utonium';
@@ -114,7 +114,7 @@ body {
 
 .subtitle {
   color: var(--lightest);
-  text-shadow:-1px -1px 0 var(--darkest),1px -1px 0 var(--darkest),-1px 1px 0 var(--darkest),1px 1px 0 var(--darkest); 
+  text-shadow: -1px -1px 0 var(--darkest), 1px -1px 0 var(--darkest), -1px 1px 0 var(--darkest), 1px 1px 0 var(--darkest);
   text-decoration: underline;
   background-color: var(--shadow);
 }
