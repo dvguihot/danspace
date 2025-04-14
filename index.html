@@ -21,7 +21,7 @@
         <a href="#" onclick="openTab(4)"><img src="./images\notepad.png">Blog</a>
         <a href="#" onclick="openTab(5)"><img src="./images\chatbox.png">Chatbox</a>
         <a href="#" onclick="openTab(6)"><img src="./images\other.png">Updates</a>
-        <a href="#" onclick="openTab(7)"><img src="./images\todo32.png">Information</a>
+        <a href="#" onclick="openTab(7)"><img src="./images\info.png">Information</a>
         <a href="#" onclick="openTab(8)"><img src="./images\todo32.png">MEDIA</a>
 
         <div class="drop-divider"> </div>
@@ -55,6 +55,8 @@
 
     <button class="icon opennew" data-target="404.html"><img src="./images\notepad.png"><br><img
         src="./images\shortcut.png" class="shortcut">Writing</button>
+    <button class="icon opennew" data-target="https://open.spotify.com/playlist/7ofqHNaaQCea9ubpXuPDT0?si=Q2vX5QSjSBuawJAh4FubfQ"><img src="./images\sound.png"><br><img
+        src="./images\shortcut.png" class="shortcut">Playlist</button>
     <!-- <button class="icon opennew" data-target="links/reading.html"><img src="./images\links.png"><br><img src="./images\shortcut.png" class="shortcut">Lit. Links</button> -->
     <button class="icon opennew" data-target="rooms/room1.html"><img src="./images\rooms.png"><br><img
         src="./images\shortcut.png" class="shortcut">Rooms</button>
@@ -81,7 +83,24 @@
   <div id="div3" class="hidden-div draggable">
     <div class="header"><img src="images\terminal.png"><b>Terminal</b><button class="x-button border"
         onclick="closeTab(3)">X</button></div>
-    <div class="content"><iframe src="html/terminal.html" height="300" width="485"></iframe></div>
+    <div class="content"><iframe src="html/widgets/terminal/terminal.html" height="300" width="485"></iframe></div>
+  </div>
+
+  <div id="div9" class="hidden-div draggable">
+    <div class="header"><img src="images\warning.png"><b>HELP HELP HELP</b><button class="x-button border"
+        onclick="closeTab(9)">X</button></div>
+    <div class="content">
+      <h1>HELP HELP HELP</h1>
+    </div>
+  </div>
+
+  <div id="div10" class="hidden-div draggable">
+    <div class="header"><img src="images\disk.png"><b>My Playlist</b><button class="x-button border"
+        onclick="closeTab(10)">X</button></div>
+    <div class="content">
+      <div class="folder"><a href="" target=”_blank”><img
+        src="https://i.imgur.com/1pI9aWr.png"><br>main playlist</a></div>
+    </div>
   </div>
 
   <div id="div4" class="hidden-div draggable">
@@ -89,8 +108,6 @@
         onclick="closeTab(4)">X</button></div>
     <div class="content"><iframe src="blog/blog.html" height="600" width="900"></iframe></div>
   </div>
-
-
 
   <div class="onscreen"></div>
 
@@ -100,29 +117,31 @@
       <button class="x-button border" onclick="closeTab(2)">X</button>
     </div>
     <div class="explorer-navigator">
-      <span class="nav-tab"><u>F</u>ile</span> <span class="nav-tab"><u>E</u>dit</span><span
-        class="nav-tab"><u>S</u>earch</span><span class="nav-tab"><u>H</u>elp</span>
+      <span class="nav-tab"><u>F</u>ile</span>
+      <span class="nav-tab"><u>E</u>dit</span>
+      <span class="nav-tab"><u>S</u>earch</span>
+      <span class="nav-tab" onclick="helpFunc()"><u>H</u>elp</span>
     </div>
     <span class="nav-search-bar">
       <div class="explorer-navigator">
-        <span class="back-button border" data-src="html/cover.html" onclick="loadFrame(this)">&#60;</span>
+        <span class="back-button border" data-src="html/widgets/home/cover.html" onclick="loadFrame(this)">&#60;</span>
         <span class="address-text"> Address </span>
         <span class="nav-search-bar">
           <span class="search-bar-text">My Documents</span></span>
       </div>
       <div class="content">
-        <iframe src="html/cover.html" id="frame2"></iframe>
+        <iframe src="html/widgets/home/cover.html" id="frame2"></iframe>
       </div>
       <div class="menulower">
-        <div class="main-option border" data-src="html/cover.html" onclick="loadFrame(this)"><img
+        <div class="main-option border" data-src="html/widgets/home/cover.html" onclick="loadFrame(this)"><img
             src="https://i.imgur.com/wxGBOYc.png"><br>homepage</div>
-        <div class="main-option border" data-src="html/aboutme.html" onclick="loadFrame(this)"><img
+        <div class="main-option border" data-src="html/widgets/home/aboutme.html" onclick="loadFrame(this)"><img
             src="https://i.imgur.com/kwjK2yv.png"><br>about me</div>
-        <div class="main-option border" data-src="html/sitemap.html" onclick="loadFrame(this)"><img
+        <div class="main-option border" data-src="html/widgets/home/sitemap.html" onclick="loadFrame(this)"><img
             src="https://i.imgur.com/SAO8QvY.png"><br>sitemap</div>
-        <div class="main-option border" data-src="html/links.html" onclick="loadFrame(this)"><img
+        <div class="main-option border" data-src="html/widgets/home/links.html" onclick="loadFrame(this)"><img
             src="https://i.imgur.com/RiwMYet.png"><br>links</div>
-        <div class="main-option border" data-src="html/miniblog.html" onclick="loadFrame(this)"><img
+        <div class="main-option border" data-src="html/widgets/home/miniblog.html" onclick="loadFrame(this)"><img
             src="https://i.imgur.com/sDRKyRf.png"><br>journal</div>
       </div>
   </div>
@@ -132,13 +151,13 @@
       <button class="x-button border" onclick="closeTab(6)">X</button>
     </div>
     <div class="content">
+      <span class="title"><img src="images/berry.png">14th apr 2025:</span><br>
+      added music playlist link, organised backend structure, and added some easter eggs!
+      <br><br>
       <span class="title"><img src="images/berry.png">11th apr 2025:</span><br>
       updated blog post, also started filling in the music page<br>
       fixed lots of messy code, however the repo is still known to the state of california to cause cancer, birth
       defects, and reproductive harm.
-      <br><br>
-      <span class="title"><img src="images/berry.png">10th apr 2025:</span><br>
-      site release!
       <br><br>
       <span class="title"><img src="images/berry.png">6th apr 2025:</span><br>
       made some progress on the command prompt/terminal tab. i need to work out what it'll be used for in the future,
@@ -202,9 +221,9 @@
       <button class="x-button border" onclick="closeTab(8)">X</button>
     </div>
     <div class="content">
-      <div class="folder"><a href="html/music.html" target=”_blank”><img
+      <div class="folder"><a href="html/pages/music.html" target=”_blank”><img
             src="https://i.imgur.com/1pI9aWr.png"><br>music</a></div>
-      <div class="folder"><a href="html/reviews.html" target=”_blank”><img
+      <div class="folder"><a href="html/pages/reviews.html" target=”_blank”><img
             src="https://i.imgur.com/beWuWAN.png"><br>film reviews</a></div>
 
     </div>
@@ -229,6 +248,22 @@
     const sparkleImage = "https://i.imgur.com/F8aTF8B.png";
     const sparkleSizeRange = [5, 5];
 
+    console.log('%c danspace', 'font-weight: bold; font-size: 50px;color: red; text-shadow: 3px 3px 0 rgb(217,31,38) , 6px 6px 0 rgb(226,91,14) , 9px 9px 0 rgb(245,221,8) , 12px 12px 0 rgb(5,148,68) , 15px 15px 0 rgb(2,135,206) , 18px 18px 0 rgb(4,77,145) , 21px 21px 0 rgb(42,21,113)');
+
+    function startTime() {
+      console.log("%cHey, I see you're looking at my code, instead, you could check out my GitHub repo at https://github.com/dvguihot/danspace", "color: white; background-color: #007acc;");
+    }
+
+    let helpPresses = 0;
+
+    function helpFunc() {
+      helpPresses++
+      console.log(helpPresses)
+
+      if (helpPresses % 3 == 0) {
+        openTab(9)
+      }
+    }
 
     if (screen.width <= 700) {
       document.location = "mobilepage.html";
