@@ -55,8 +55,9 @@
 
     <button class="icon opennew" data-target="404.html"><img src="./images\notepad.png"><br><img
         src="./images\shortcut.png" class="shortcut">Writing</button>
-    <button class="icon opennew" data-target="https://open.spotify.com/playlist/7ofqHNaaQCea9ubpXuPDT0?si=Q2vX5QSjSBuawJAh4FubfQ"><img src="./images\sound.png"><br><img
-        src="./images\shortcut.png" class="shortcut">Playlist</button>
+    <button class="icon opennew"
+      data-target="https://open.spotify.com/playlist/7ofqHNaaQCea9ubpXuPDT0?si=Q2vX5QSjSBuawJAh4FubfQ"><img
+        src="./images\sound.png"><br><img src="./images\shortcut.png" class="shortcut">Playlist</button>
     <!-- <button class="icon opennew" data-target="links/reading.html"><img src="./images\links.png"><br><img src="./images\shortcut.png" class="shortcut">Lit. Links</button> -->
     <button class="icon opennew" data-target="rooms/room1.html"><img src="./images\rooms.png"><br><img
         src="./images\shortcut.png" class="shortcut">Rooms</button>
@@ -108,12 +109,25 @@
     </div>
   </div>
 
+  <div id="div13" class="hidden-div draggable">
+    <div class="header"><img src="images/photos.png"><b>Photos</b><button class="x-button border"
+        onclick="closeTab(13)">X</button></div>
+    <div class="explorer-navigator">
+      <span class="nav-tab"><u>F</u>ile</span> <span class="nav-tab"><u>E</u>dit</span><span
+        class="nav-tab"><u>S</u>earch</span><span class="nav-tab"><u>H</u>elp</span>
+    </div>
+    <div class="content">
+      <div class="folder"><a href="#" onclick="openTab(13)"><img src="https://i.imgur.com/TVsXnTH.png" width="48"
+        height="48"><br>nikon coolpix p100</a></div>
+    </div>
+  </div>
+
   <div id="div10" class="hidden-div draggable">
     <div class="header"><img src="images\disk.png"><b>My Playlist</b><button class="x-button border"
         onclick="closeTab(10)">X</button></div>
     <div class="content">
-      <div class="folder"><a href="" target=”_blank”><img
-        src="https://i.imgur.com/1pI9aWr.png"><br>main playlist</a></div>
+      <div class="folder"><a href="" target=”_blank”><img src="https://i.imgur.com/1pI9aWr.png"><br>main playlist</a>
+      </div>
     </div>
   </div>
 
@@ -239,7 +253,8 @@
             src="https://i.imgur.com/1pI9aWr.png"><br>music</a></div>
       <div class="folder"><a href="html/pages/reviews.html" target=”_blank”><img
             src="https://i.imgur.com/beWuWAN.png"><br>film reviews</a></div>
-
+      <div class="folder"><a href="#" onclick="openTab(13)"><img src="images/photos.png" width="48"
+            height="48"><br>photos</a></div>
     </div>
   </div>
 
@@ -273,13 +288,13 @@
       console.log("%cHey, I see you're looking at my code, instead, you could check out my GitHub repo at https://github.com/dvguihot/danspace", "color: white; background-color: #007acc;");
     }
 
-    window.addEventListener('message', function(event) {
+    window.addEventListener('message', function (event) {
       if (event.data && event.data.type === 'startJurassicTerm') {
-      startJurassicTerm();
+        startJurassicTerm();
       }
 
       if (event.data && event.data.type === 'startMagicWord') {
-      startMagicWord();
+        startMagicWord();
       }
     });
 
